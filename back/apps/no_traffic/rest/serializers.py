@@ -24,6 +24,9 @@ class IntersectionSerializer(CoreModelSerializer):
     class Meta:
         model = Intersection
         fields = '__all__'
+        expandable_fields = {
+            'streetsInIntersection': ('apps.no_traffic.rest.serializers.StreetInIntersectionSerializer', {'many': True}),
+        }
 
 
 class StreetInIntersectionSerializer(CoreModelSerializer):

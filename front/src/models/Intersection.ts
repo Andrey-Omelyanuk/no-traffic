@@ -1,5 +1,6 @@
 import { Model, model, field } from 'mobx-orm'
 import { api } from '../services/http-adapter'
+import { StreetInIntersection } from './StreetInIntersection'
 
 
 @api('intersection')
@@ -7,6 +8,15 @@ import { api } from '../services/http-adapter'
 export class Intersection extends Model {
     @field name?: string     
     @field private location?: string     
+
+    readonly streetsInIntersection: StreetInIntersection[]
+
+    get city() {
+        if (this.streetsInIntersection.length)
+            // city of first street is the city of intersection
+            return this.streetsInIntersection[0]?.street?.city.name
+        return ''
+    }
 
     get longitude() {
         return locationStringToObject(this.location).longitude

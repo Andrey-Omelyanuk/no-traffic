@@ -15,6 +15,7 @@ export const IntersectionListItem = observer((props: IntersectionListItemProps) 
         <div>{ obj.name }</div>
         <div> Lng: { obj.longitude }</div>
         <div> Lan: { obj.latitude }</div>
+        <div> City: { obj.city }</div>
       </Link>
   )
 })

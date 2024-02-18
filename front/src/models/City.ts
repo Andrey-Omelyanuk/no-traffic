@@ -1,5 +1,5 @@
 import { Model, model, field } from 'mobx-orm'
-import { api } from '@/services/http-adapter'
+import { api } from '../services/http-adapter'
 import { Street } from './Street'
 
 

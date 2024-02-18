@@ -1,5 +1,5 @@
-import { Model, model, field, foreign } from 'mobx-orm'
-import { api } from '@/services/http-adapter'
+import { Model, model, field, foreign, many } from 'mobx-orm'
+import { api } from '../services/http-adapter'
 import { Street } from './Street'
 import { Intersection } from './Intersection'
 
@@ -13,3 +13,4 @@ export class StreetInIntersection extends Model {
     @foreign(Street) readonly street: Street 
     @foreign(Intersection) readonly intersection: Intersection 
 }
+many(StreetInIntersection, 'intersection_id')(Intersection, 'streetsInIntersection')

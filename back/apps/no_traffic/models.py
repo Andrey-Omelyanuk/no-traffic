@@ -43,7 +43,7 @@ class Intersection(Model):
 
 class StreetInIntersection(Model):
     street       = ForeignKey    (Street        , on_delete=CASCADE, null=False)
-    intersection = ForeignKey    (Intersection  , on_delete=CASCADE, null=False)
+    intersection = ForeignKey    (Intersection  , on_delete=CASCADE, null=False, related_name='streetsInIntersection')
 
     class Meta:
         unique_together = (("street", "intersection"),)

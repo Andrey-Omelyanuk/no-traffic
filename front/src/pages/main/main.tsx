@@ -6,13 +6,22 @@ import { observer } from 'mobx-react-lite'
 import { Intersection } from '../../models/Intersection'
 import { IntersectionList } from '../../components/no_traffic/IntersectionList'
 import { Loading } from '../../components/core/loading'
+// 
+import { StreetInIntersection } from '../../models/StreetInIntersection'
 
 export const MainPage = observer(() => {
-  const [allInterseptionsQuery] = useState(() => Intersection.getQueryX({ autoupdate: true }) as QueryX<Intersection>)
+  const [allInterseptionsQuery] = useState(() => Intersection.getQueryX({
+    // relations: ['streetsInIntersection.street.city'],
+    autoupdate: true
+  }) as QueryX<Intersection>)
+  const [allStreetsInInterseptionQuery] = useState(() => StreetInIntersection.getQueryX({
+    relations: ['street.city'],
+    autoupdate: true
+  }) as QueryX<StreetInIntersection>)
 
   return (
     <div>
-      { !allInterseptionsQuery.isReady
+      { !allInterseptionsQuery.isReady || !allStreetsInInterseptionQuery.isReady
           ? <Loading/>
           : <div style={{display: 'flex', padding: '15px', gap: '20px'}} >
               <div>
