@@ -1,0 +1,5 @@
+- model: sites.site
+  pk: 1
+  fields:
+    domain: no-traffic.online
+    name: no-traffic.online

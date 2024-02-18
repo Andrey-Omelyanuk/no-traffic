@@ -1,0 +1,15 @@
+- model: auth.user
+  pk: 1
+  fields:
+    password: pbkdf2_sha256$600000$S0fZFo6qcE02VVODqjl6JH$7j7i9ihEeLN8qi1474Zn4F+EGSVGlKEL9G8vORbjLAI=
+    last_login: 2024-02-18 11:28:26.602557+00:00
+    is_superuser: true
+    username: admin
+    first_name: Admin
+    last_name: Super
+    email: admin@propagandon.online
+    is_staff: true
+    is_active: true
+    date_joined: 2023-01-10 07:44:52.147823+00:00
+    groups: []
+    user_permissions: []

@@ -1,0 +1,12 @@
+- model: no_traffic.city
+  pk: 1
+  fields:
+    name: CityA
+- model: no_traffic.city
+  pk: 2
+  fields:
+    name: CityB
+- model: no_traffic.city
+  pk: 3
+  fields:
+    name: CityC

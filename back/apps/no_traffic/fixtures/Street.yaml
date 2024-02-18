@@ -1,0 +1,25 @@
+- model: no_traffic.street
+  pk: 1
+  fields:
+    city: 1
+    name: St.A
+- model: no_traffic.street
+  pk: 2
+  fields:
+    city: 1
+    name: St.B
+- model: no_traffic.street
+  pk: 3
+  fields:
+    city: 1
+    name: St.C
+- model: no_traffic.street
+  pk: 4
+  fields:
+    city: 2
+    name: St.A
+- model: no_traffic.street
+  pk: 5
+  fields:
+    city: 2
+    name: St.X

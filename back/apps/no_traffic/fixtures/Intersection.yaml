@@ -1,0 +1,15 @@
+- model: no_traffic.intersection
+  pk: 1
+  fields:
+    name: In.A
+    location: SRID=4326;POINT (31.40709234708733 31.016636414139782)
+- model: no_traffic.intersection
+  pk: 2
+  fields:
+    name: In.B
+    location: SRID=4326;POINT (98.39624753539913 7.8681487883870895)
+- model: no_traffic.intersection
+  pk: 3
+  fields:
+    name: In.C
+    location: SRID=4326;POINT (31.211807479435134 30.328465825312577)

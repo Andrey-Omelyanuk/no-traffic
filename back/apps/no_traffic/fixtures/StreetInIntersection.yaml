@@ -1,0 +1,25 @@
+- model: no_traffic.streetinintersection
+  pk: 1
+  fields:
+    street: 1
+    intersection: 1
+- model: no_traffic.streetinintersection
+  pk: 2
+  fields:
+    street: 2
+    intersection: 1
+- model: no_traffic.streetinintersection
+  pk: 3
+  fields:
+    street: 3
+    intersection: 1
+- model: no_traffic.streetinintersection
+  pk: 4
+  fields:
+    street: 4
+    intersection: 2
+- model: no_traffic.streetinintersection
+  pk: 5
+  fields:
+    street: 5
+    intersection: 2
