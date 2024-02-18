@@ -15,9 +15,8 @@ services:
     build: { context: ./front, target : dev }
     volumes:
       - ./front:/app
-    expose:
-      - 3000
     ports:
+      - 3000:3000
       - 35729:35729  # for livereload
     depends_on:
       - back
