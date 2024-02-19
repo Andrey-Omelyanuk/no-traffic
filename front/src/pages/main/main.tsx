@@ -10,7 +10,7 @@ import { Loading } from '../../components/core/loading'
 import { StreetInIntersection } from '../../models/StreetInIntersection'
 
 export const MainPage = observer(() => {
-  const [allInterseptionsQuery] = useState(() => Intersection.getQueryX({
+  const [allInterseptionsQuery] = useState(() => Intersection.getQueryXCacheSync({
     // relations: ['streetsInIntersection.street.city'],
     autoupdate: true
   }) as QueryX<Intersection>)

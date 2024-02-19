@@ -10,13 +10,13 @@ export interface IntersectionListItemProps {
 export const IntersectionListItem = observer((props: IntersectionListItemProps) => {
   const { obj } = props
   return (
-      <Link to={`/intersection/${obj.id}/`}>
+    <li>
+      <Link to={`/intersection/${obj.id}/`} style={{display: 'flex'}}>
         {/* FIXME: don't use hardcore links, I use it because I have no time to do everything perfect */}
         <div>{ obj.name }</div>
-        <div> Lng: { obj.longitude }</div>
-        <div> Lan: { obj.latitude }</div>
         <div> City: { obj.city }</div>
       </Link>
+    </li>
   )
 })
 
@@ -27,10 +27,10 @@ export interface IntersectionListProps {
 export const IntersectionList = observer((props: IntersectionListProps) => {
   const { query } = props
   return (
-    <div>
+    <ul>
       {query.items.map((item, i) =>
         <IntersectionListItem obj={item}  key={i}/>
       )}
-    </div>
+    </ul>
   )
 })

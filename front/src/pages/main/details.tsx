@@ -3,7 +3,7 @@ import { Intersection } from '../../models/Intersection'
 import { observer } from 'mobx-react-lite'
 import { useParams } from 'react-router-dom'
 
-export const DetailsPage = observer(() => {
+export const DetailsPage = () => {
   const { intersection_id } = useParams()
 
   console.log(intersection_id)
@@ -12,4 +12,4 @@ export const DetailsPage = observer(() => {
   return (
     <IntersectionEdit obj={intersection}/>
   )
-})
+}

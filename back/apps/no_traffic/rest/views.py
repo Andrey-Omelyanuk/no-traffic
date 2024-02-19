@@ -1,9 +1,9 @@
-from apps.core.rest.views import ReadOnlyModelViewSet
+from apps.core.rest.views import CoreReadOnlyModelViewSet, CoreModelViewSet
 from ..models import City, Street, Intersection, StreetInIntersection
 from .serializers import CitySerializer, StreetSerializer, IntersectionSerializer, StreetInIntersectionSerializer
 
 
-class CityViewSet(ReadOnlyModelViewSet):
+class CityViewSet(CoreReadOnlyModelViewSet):
     queryset         = City.objects.all()
     serializer_class = CitySerializer
 
@@ -11,7 +11,7 @@ class CityViewSet(ReadOnlyModelViewSet):
         return City.objects.all()
 
 
-class StreetViewSet(ReadOnlyModelViewSet):
+class StreetViewSet(CoreReadOnlyModelViewSet):
     queryset         = Street.objects.all()
     serializer_class = StreetSerializer
 
@@ -19,7 +19,7 @@ class StreetViewSet(ReadOnlyModelViewSet):
         return Street.objects.all()
 
 
-class IntersectionViewSet(ReadOnlyModelViewSet):
+class IntersectionViewSet(CoreModelViewSet):
     queryset         = Intersection.objects.all()
     serializer_class = IntersectionSerializer
 
@@ -27,7 +27,7 @@ class IntersectionViewSet(ReadOnlyModelViewSet):
         return Intersection.objects.all()
 
 
-class StreetInIntersectionViewSet(ReadOnlyModelViewSet):
+class StreetInIntersectionViewSet(CoreModelViewSet):
     queryset         = StreetInIntersection.objects.all()
     serializer_class = StreetInIntersectionSerializer
 

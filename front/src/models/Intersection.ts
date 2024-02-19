@@ -34,8 +34,13 @@ export class Intersection extends Model {
 }
  
 function locationStringToObject(str: String) {
-    var LatLng = str.split(' ') 
-    return {
+    let empty = {
+        latitude: 0,
+        longitude: 0
+    }
+    if (!str) return empty
+    let LatLng = str.split(' ') 
+    return !LatLng ? empty : {
         latitude: parseFloat(LatLng[1].substring(1)),
         longitude: parseFloat(LatLng[2].substring(0, LatLng[2].length - 1))
     } 
